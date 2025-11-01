@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.aa803118.css",
+    "main.js": "/react-portfolio/static/js/main.9c98e4c6.js",
+    "static/media/fa-solid-900.woff2": "/react-portfolio/static/media/fa-solid-900.8ae0d37556ff1e685de2.woff2",
+    "static/media/fa-brands-400.woff2": "/react-portfolio/static/media/fa-brands-400.1c5c7716b05754cb4eab.woff2",
+    "static/media/fa-regular-400.woff2": "/react-portfolio/static/media/fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
+    "static/media/fa-v4compatibility.woff2": "/react-portfolio/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
+    "index.html": "/react-portfolio/index.html",
+    "main.aa803118.css.map": "/react-portfolio/static/css/main.aa803118.css.map",
+    "main.9c98e4c6.js.map": "/react-portfolio/static/js/main.9c98e4c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa803118.css",
+    "static/js/main.9c98e4c6.js"
+  ]
+}
