@@ -1,0 +1,42 @@
+.scrolldown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.chevrons {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.chevrondown {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-bottom: 3px solid skyblue;
+  border-right: 3px solid skyblue;
+  transform: rotate(45deg);
+  animation: moveDown 1.5s infinite;
+}
+
+.chevrondown:nth-child(2) {
+  top: 10px;
+  animation-delay: 0.3s;
+}
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-10px, -10px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+}
