@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ramzsetup from "../../assets/ramzsetup.png";
+import candle from "../../assets/candle.jpg";
 
 const About = () => {
   const skills = [
@@ -19,9 +21,9 @@ const About = () => {
       description: "Deep technical analysis and market research",
       image: (
         <img
-          src="./candle.jpg"
+          src={candle}
           alt="Chart Analysis"
-          className="w-full h-48 rounded-lg p-4"
+          className="w-full h-48 rounded-lg p-4 object-cover"
         />
       ),
     },
@@ -46,7 +48,6 @@ const About = () => {
               <stop offset="100%" stopColor="#0d9488" />
             </linearGradient>
           </defs>
-          {/* Bot Interface Elements */}
           <circle
             cx="80"
             cy="60"
@@ -110,7 +111,6 @@ const About = () => {
               <stop offset="100%" stopColor="#9333ea" />
             </linearGradient>
           </defs>
-          {/* Code Editor Interface */}
           <rect
             x="20"
             y="30"
@@ -152,7 +152,6 @@ const About = () => {
               <stop offset="100%" stopColor="#ef4444" />
             </linearGradient>
           </defs>
-          {/* Educational Content Layout */}
           <rect
             x="30"
             y="40"
@@ -224,19 +223,18 @@ const About = () => {
       <section className="py-20 bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Profile Image */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div >
-                <div className="w-full h-full bg-slate-700 rounded-full flex items-center justify-center">
-                  <img src="./ramzsetup.png"
-                    alt="logo"
-                  />
-                </div>
+              <div className="w-full h-full bg-slate-700 rounded-full flex items-center justify-center">
+                <img
+                  src={ramzsetup}
+                  alt="logo"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-accent-500 text-white p-4 rounded-full">
                 <svg
@@ -284,7 +282,6 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Download CV Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

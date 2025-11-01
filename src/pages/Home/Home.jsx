@@ -6,55 +6,60 @@ import GetTouch from '../../components/GetTouch';
 import Scroll from '../../components/Scroll';
 
 
+import forexdashboard from '../../assets/forexdashboard.png';
+import ramzsetup from '../../assets/ramzsetup.png';
+import forex from '../../assets/forex.png';
+import candle from '../../assets/candle.jpg';
+import trading from '../../assets/trading.jpg';
+
+const showcaseImages = [
+  {
+    title: 'Forex Trading Dashboard',
+    description: 'Advanced chart analysis and market insights',
+    image: (
+      <img
+        src={forexdashboard}
+        alt="Forex Trading Dashboard"
+        className="w-[300px] h-[300px] object-cover rounded-lg p-4"
+      />
+    ),
+  },
+  {
+    title: 'Binary Trading Setup',
+    description: 'Deriv platform optimization and automation',
+    image: (
+      <img
+        src={trading}
+        alt="Binary Trading Setup"
+        className="w-[300px] h-[300px] object-cover rounded-lg p-4"
+      />
+    ),
+  },
+  {
+    title: 'Web Development Workspace',
+    description: 'Modern React applications and trading tools',
+    image: (
+      <img
+        src={ramzsetup}
+        alt="Web Development Workspace"
+        className="w-[300px] h-[300px] object-cover rounded-lg p-4"
+      />
+    ),
+  },
+  {
+    title: 'Project Portfolio',
+    description: 'Innovative trading applications and websites',
+    image: (
+      <img
+        src={forex}
+        alt="Project Portfolio"
+        className="w-[300px] h-[300px] object-cover rounded-lg p-4"
+      />
+    ),
+  },
+];
+
 const Home = () => {
-  const showcaseImages = [
-   {
-  title: 'Forex Trading Dashboard',
-  description: 'Advanced chart analysis and market insights',
-  image: (
-    <img
-      src="./candle.jpg"
-      alt="Forex Trading Dashboard"
-      className="w-[300px] h-[300px] object-cover rounded-lg p-4"
-    />
-  ),
-},
-{
-  title: 'Binary Trading Setup',
-  description: 'Deriv platform optimization and automation',
-  image: (
-    <img
-      src="./trading.jpg"
-      alt="Binary Trading Setup"
-       className="w-[300px] h-[300px] object-cover rounded-lg p-4"
-    />
-  ),
-},
-{
-  title: 'Web Development Workspace',
-  description: 'Modern React applications and trading tools',
-  image: (
-    <img
-      src="./ramzsetup.png"
-      alt="Web Development Workspace"
-      className="w-[300px] h-[300px] object-cover rounded-lg p-4"
-    />
-  ),
-},
-{
-  title: 'Project Portfolio',
-  description: 'Innovative trading applications and websites',
-  image: (
-    <img
-      src="./forex.png"
-      alt="Project Portfolio"
-       className="w-[300px] h-[300px] object-cover rounded-lg p-4"
-    />
-  ),
-},
-
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -110,31 +115,29 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Link
-                to="/portfolio"
-                
-              >
+              <Link to="/portfolio">
                 <Button />
-                
               </Link>
-              <Link
-                to="/contact"
-               
-              >
-               <GetTouch />
+              <Link to="/contact">
+                <GetTouch />
               </Link>
             </motion.div>
+
+            {/* Profile Image */}
+            <div className="mt-8">
+              <img src={candle} alt="profile" className="w-20 h-20 rounded-full mx-auto" />
+            </div>
           </motion.div>
         </div>
 
         {/* Scroll Indicator */}
-       <motion.div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-         <Scroll />
+          <Scroll />
         </motion.div>
       </section>
 
@@ -166,9 +169,7 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-slate-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
               >
-                <div className="p-4">
-                  {item.image}
-                </div>
+                <div className="p-4">{item.image}</div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
                   <p className="text-gray-400 text-sm">{item.description}</p>
